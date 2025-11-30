@@ -43,3 +43,6 @@ export default function FeaturesSection() {
     </section>
   )
 }
+<section id="features" className="py-24 px-4 bg-gray-50">
+  {/* Your features code */}
+</section>

@@ -1,5 +1,9 @@
-// app/components/Hero.js
 export default function Hero() {
+  const handleScroll = () => {
+    const featuresSection = document.getElementById("features");
+    featuresSection?.scrollIntoView({ behavior: "smooth" }); // smooth scroll
+  };
+
   return (
     <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 px-4">
       <div className="mx-auto max-w-4xl text-center">
@@ -9,7 +13,10 @@ export default function Hero() {
         <p className="mb-8 text-lg text-white/80 md:text-xl lg:text-2xl">
           The easiest way to manage your tasks efficiently
         </p>
-        <button className="h-12 px-8 text-base font-semibold text-blue-700 bg-white rounded hover:scale-105 hover:shadow-lg transition-all duration-200 md:h-14 md:px-10 md:text-lg">
+        <button
+          onClick={handleScroll}  // <-- add this
+          className="h-12 px-8 text-base font-semibold text-blue-700 bg-white rounded hover:scale-105 hover:shadow-lg transition-all duration-200 md:h-14 md:px-10 md:text-lg"
+        >
           Get Started
         </button>
       </div>

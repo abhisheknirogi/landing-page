@@ -1,7 +1,9 @@
+"use client";   // <-- Add this at the very top
+
 export default function Hero() {
   const handleScroll = () => {
     const featuresSection = document.getElementById("features");
-    featuresSection?.scrollIntoView({ behavior: "smooth" }); // smooth scroll
+    featuresSection?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -14,7 +16,7 @@ export default function Hero() {
           The easiest way to manage your tasks efficiently
         </p>
         <button
-          onClick={handleScroll}  // <-- add this
+          onClick={handleScroll}
           className="h-12 px-8 text-base font-semibold text-blue-700 bg-white rounded hover:scale-105 hover:shadow-lg transition-all duration-200 md:h-14 md:px-10 md:text-lg"
         >
           Get Started

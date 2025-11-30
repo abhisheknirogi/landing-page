@@ -1,9 +1,14 @@
-"use client";   // <-- Add this at the very top
+"use client"; // Marks this as a Client Component
+
+import React from "react";
 
 export default function Hero() {
+  // Handler to scroll to the features section
   const handleScroll = () => {
     const featuresSection = document.getElementById("features");
-    featuresSection?.scrollIntoView({ behavior: "smooth" });
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -23,5 +28,5 @@ export default function Hero() {
         </button>
       </div>
     </main>
-  )
+  );
 }
